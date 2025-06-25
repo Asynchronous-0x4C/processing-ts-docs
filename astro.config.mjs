@@ -7,8 +7,7 @@ export default defineConfig({
   outDir:"./docs",
   base:"/processing-ts-docs/",
   build:{
-    assets:"astro",
-    format:"preserve"
+    assets:"astro"
   },
   vite:{
     esbuild:{
