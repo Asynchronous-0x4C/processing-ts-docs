@@ -106,6 +106,10 @@ main {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #tabs-container{
+    width: calc((min(100vw,1280px) - 5rem)/2 - 6rem) !important;
+  }
 }
 
 /* Card Styles */
@@ -288,6 +292,8 @@ select:focus,
   overflow-x: auto;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+  width: calc((min(100vw,1280px) - 3rem) - 6rem);
+  scrollbar-width: none;
 }
 
 .tab {
@@ -379,7 +385,7 @@ select:focus,
   z-index: 10;
   bottom: 140%;
   left: 50%;
-  margin-left: -110px;
+  margin-left: -180px;
   transition: opacity 0.3s;
   font-size: 0.8rem;
   line-height: 1.4;
@@ -389,7 +395,7 @@ select:focus,
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 180px;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
