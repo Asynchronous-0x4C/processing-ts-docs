@@ -23,7 +23,7 @@ self.addEventListener('fetch', function (e) {
     caches.open(CACHE_NAME).then(cache =>
       cache.match(e.request).then((response) => {
         return response || fetch(e.request).then((response) => {
-          console.log(response)
+          if(response.url.startsWith("chrome-extension://"))return response;
           cache.put(e.request, response.clone());
           return response;
         });

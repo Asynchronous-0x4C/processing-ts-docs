@@ -7,7 +7,7 @@ import DemoScript from "../components/DemoScript.astro";
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/processing-ts-docs/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Processing-ts Demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,23 +15,12 @@ import DemoScript from "../components/DemoScript.astro";
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="manifest" href="./manifest.json">
-  <DemoScript/>
-  <script>
-    if ('serviceWorker' in navigator) {
-        console.log('service worker is active');
-        navigator.serviceWorker.register('../demo/sw.js').then(function (registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function (err) {
-            console.log('ServiceWorker registration failed: ', err);
-        });
-    }
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <DemoScript/>
   <div class="container">
     <header>
       <h1>Processing Live Demo</h1>
